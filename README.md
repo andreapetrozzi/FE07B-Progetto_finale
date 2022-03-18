@@ -1,3 +1,8 @@
+# FE0721B-Progetto_finale
+Sistema per la gestione di un'anagrafica clienti e delle loro fatture
+
+
+
 Framework usati: Bootstrap, NGBootstrap
 
 Estensioni da installare sul TERMINALE:
