@@ -1,3 +1,16 @@
+Framework usati: Bootstrap, NGBootstrap
+
+Estensioni da installare sul TERMINALE:
+npm i
+npm i bootstrap
+ng add @ng-bootstrap/ng-bootstrap
+
+
+
+
+
+
+
 # ProgettoFinale
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
