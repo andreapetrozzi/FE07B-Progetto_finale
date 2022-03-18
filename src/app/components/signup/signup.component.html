@@ -1,0 +1,67 @@
+<!-- SCHEDA DI REGISTRAZIONE -->
+<section>
+
+  <div class="wrapper fadeInDown">
+    <div class="container register">
+      <div class="row">
+
+        <div class="col-md-9 register-right">
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+              <h2 class="register-heading bold">Registrati</h2>
+
+              <div class="row register-form">
+                <div class="col-md-6">
+
+                  <form [formGroup]="form" (submit)="cSalva(form)">
+
+                    <!-- USERNAME -->
+                    <div class="fadeIn first">
+                      <div class="form-group">
+                        <input class="form-control" formControlName="username" type="text" id="username" autocomplete="false" placeholder="Username*">
+                      </div>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div class="fadeIn second">
+                      <div class="form-group">
+                        <input class="form-control" formControlName="email" type="email" id="email" autocomplete="false" placeholder="Email*">
+                      </div>
+                    </div>
+
+                    <!-- PASSWORD -->
+                    <div class="fadeIn third">
+                      <div class="form-group">
+                        <input class="form-control" formControlName="password" type="password" id="password" autocomplete="false" placeholder="Password*">
+                      </div>
+                    </div>
+
+
+                    <!-- SELECT RUOLO -->
+                    <div class="fadeIn fourth">
+                        <div class="col-md-14">
+                          <div class="form-group">
+                            <select class="form-control" formControlName="roles" id="roles">
+                              <option value="admin">Admin</option>
+                              <option value="user">User</option>
+                            </select>
+                          </div>
+                        </div>
+                     </div>
+
+                     <!-- BUTTON -->
+                     <button type="submit" class="btn btn-danger" [disabled]="!form.valid">Registrati</button>
+
+                  </form>
+
+                 </div> <!-- col-md-6 -->
+                </div> <!-- row register-form -->
+              </div> <!-- row register-form -->
+            </div> <!-- tab-pane fade show active -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>

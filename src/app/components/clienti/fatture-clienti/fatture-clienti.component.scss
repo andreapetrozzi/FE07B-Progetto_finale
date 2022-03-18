@@ -1,0 +1,68 @@
+/* Global Style */
+section {
+  width: 100%;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url(https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80) center center no-repeat scroll;
+  background-size:cover;
+}
+
+
+
+/* Typography */
+th,
+td {
+  color: #fff;
+}
+
+h1 {
+  color: #00D9DA;
+  padding: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+
+/* Layout tabella */
+table {
+    border: none;
+    border-collapse: collapse;
+    padding: 0;
+    table-layout: fixed;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+table th,
+table td,
+table tr {
+  border: none;
+  text-align: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Formattazione pulsanti */
+button,
+a {
+    margin-left: 30px;
+    padding: 9px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* Layout paginazione */
+.pagination {
+  text-align: center;
+  float: right;
+}
+
+a:hover {
+    background-color: #00D9DA;
+}
+

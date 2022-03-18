@@ -1,0 +1,54 @@
+<!-- LOGIN -->
+
+<section>
+
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+
+      <!-- icona -->
+      <div class="fadeIn first">
+        <img src="https://cdn-icons-png.flaticon.com/512/152/152533.png" id="icon" alt="User Icon" />
+      </div>
+
+      <!-- form -->
+      <form #form="ngForm" (ngSubmit)="login(form)">
+        <div class="fadeIn second">
+
+          <input
+          type="text"
+          id="username"
+          class="form-control"
+          ngModel
+          name="username"
+
+
+          placeholder="Username*"/>
+        </div>
+
+        <div class="fadeIn third">
+
+          <input
+
+          type="password"
+          id="password"
+          class="form-control"
+          ngModel
+          name="password"
+
+
+          placeholder="Password*"/>
+        </div>
+
+        <div class="fadeIn fourth">
+          <button class="button" type="submit">LOGIN</button>
+       </div>
+      </form>
+
+    <!-- Registrati -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Torna nella home e registrati</a>
+    </div>
+
+  </div>
+</div>
+</section>

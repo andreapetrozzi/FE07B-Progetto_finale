@@ -1,0 +1,25 @@
+<header>
+
+  <h1 class="logo">CRM | Epicode School</h1>
+
+  <nav>
+    <ul class="menu">
+      <li><a class="nav-link active" aria-current="page" [routerLink]="['']" routerLinkActive="router-link-active" *ngIf="!isLoggedUser()">Home</a></li>
+      <li><a class="nav-link" [routerLink]="['signup']" routerLinkActive="router-link-active" *ngIf="!isLoggedUser()">Registrati</a></li>
+      <li><a class="nav-link" [routerLink]="['fatture']" routerLinkActive="router-link-active"  *ngIf="isLoggedUser()">Fatture</a></li>
+      <li><a class="nav-link" [routerLink]="['clienti']" routerLinkActive="router-link-active"  *ngIf="isLoggedUser()">Clienti</a></li>
+      <li><a class="nav-link" [routerLink]="['lista']" routerLinkActive="router-link-active" *ngIf="isLoggedUser()">Utenti</a></li>
+    </ul>
+  </nav>
+
+  <button *ngIf="!isLoggedUser()"><a class="nav-link" [routerLink]="['login']" routerLinkActive="router-link-active" >Login <i class="bi bi-box-arrow-in-right"></i></a></button>
+
+
+  <!-- LOGOUT -->
+    <div class="navbar-nav-2">
+      <button *ngIf="isLoggedUser()">
+        <a class="nav-link" (click)="Logout()" >Logout <i class="bi bi-box-arrow-right"></i></a>
+      </button>
+    </div>
+
+</header>

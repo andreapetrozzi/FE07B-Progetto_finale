@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clearer {
+    clear: both;
+}
+
+img {
+    border: none;
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    background-color: #fff;
+    font-family: "Helvetica", sans-serif;
+}
+
+header,
+nav,
+article,
+aside,
+section,
+footer,
+main,
+figure,
+figcaption {
+    display: block;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.content {
+    margin: 0 auto;
+    width: 1160px;
+}
+
+.col-1 {
+    float: left;
+    width: 8.33333%;
+}
+
+.col-2 {
+    float: left;
+    width: 16.66666%;
+}
+
+.col-3 {
+    float: left;
+    width: 25%;
+}
+
+.col-4 {
+    float: left;
+    width: 33.33333%;
+}
+
+.col-6 {
+    float: left;
+    width: 50%;
+}
+
+.col-8 {
+    float: left;
+    width: 66.66666%;
+}
+
+.col-10 {
+    float: left;
+    width: 83.33333%;
+}
+
+.divider {
+    padding: 20px 0;
+}
+
+.spacer {
+    padding: 70px 0;
+}
+
+.responsive,
+.responsive img {
+    height: auto;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+/*Global style */
+body {
+    background: #242424;
+}
+
+.menu,
+a,
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 25px 10%;
+    border-bottom: 2px solid #FF2751;
+    /*box-shadow: 0 1px 2px 0 rgba(255, 0, 0, 0.856), 0 2px 6px 2px rgba(243, 33, 33, 0.897);*/
+
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.menu li a {
+    transition: all .3s ease;
+}
+
+.menu a:hover {
+    color: #00D9DA;
+}
+
+button {
+    margin-left: 30px;
+    padding: 9px 25px;
+    background: #FF2751;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease;
+    text-decoration: solid;
+}
+
+button:hover {
+    background: #00D9DA;
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(100deg, rgba(255, 39, 81, 1) 35%, rgba(0, 218, 219, 1) 81%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/** Desktop, iPad Pro **/
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    .content {
+        margin: 0 2%;
+        width: 96%
+    }
+}
+
+/** Desktop 12", iPad PRO Portrait, iPad landscape **/
+@media only screen and (max-width: 1024px) {
+    .content {
+        margin: 0 2%;
+        width: 96%
+    }
+}
+
+/** Display 5.5". iPad Portrait, iPhone 6, 6s, 7, 8, X, Xs, 11, SE2 portrait and landscape, iPhone 5s landscape **/
+@media only screen and (max-width: 768px) {
+    .col-1,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-6,
+    .col-8,
+    .col-10 {
+        float: none;
+        width: 100%}
+}
+
+/** Display 4". iPhone 5s portrait **/
+@media only screen and (max-width: 320px) {
+
+}
+
