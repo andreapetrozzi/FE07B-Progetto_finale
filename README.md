@@ -1,5 +1,5 @@
 # FE0721B-Progetto_finale
-Sistema per la gestione di un'anagrafica clienti e delle loro fatture
+Sistema per la gestione di un'anagrafica clienti e delle loro fatture con Angular
 
 ***TRACCIA PROGETTO FINALE***
 
