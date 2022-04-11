@@ -19,6 +19,12 @@ npm i bootstrap
 ng add @ng-bootstrap/ng-bootstrap
 
 
+![01](https://user-images.githubusercontent.com/98649610/162673183-2f22051a-257b-4579-b33e-0a07302007b8.JPG)
+
+
+
+
+
 
 # ProgettoFinale
 
