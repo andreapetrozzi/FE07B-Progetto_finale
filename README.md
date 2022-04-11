@@ -21,11 +21,9 @@ ng add @ng-bootstrap/ng-bootstrap
 
 ![01](https://user-images.githubusercontent.com/98649610/162673278-4dffbec6-38d0-4241-bd09-505acaab251f.JPG)
 
-
 Credenziali di accesso: 
 username: admin; 
 password: 111111. 
-
 
 # ProgettoFinale
 
