@@ -1,7 +1,7 @@
 # FE0721B-Progetto_finale
 Sistema per la gestione di un'anagrafica clienti e delle loro fatture con Angular
 
-***TRACCIA PROGETTO FINALE***
+*** PROGETTO FINALE***
 
 Il progetto consiste nella creazione di un sistema per la gestione di un'anagrafica clienti e delle loro fatture.
 Le API sono ad accesso riservato, è previsto un sistema di login e scambio di token Beerer.
