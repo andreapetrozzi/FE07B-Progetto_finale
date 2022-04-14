@@ -18,14 +18,17 @@ npm i
 npm i bootstrap
 ng add @ng-bootstrap/ng-bootstrap
 
-* Homepage *
+* Homepage 
 ![01](https://user-images.githubusercontent.com/98649610/162673278-4dffbec6-38d0-4241-bd09-505acaab251f.JPG)
 
-* Lista delle fatture *
+
+* Lista delle fatture 
 ![01](https://user-images.githubusercontent.com/98649610/163393069-34a46ee2-1c43-478a-ab8a-82b4fd4b166b.JPG)
-* Lista clienti *
+
+* Lista clienti 
 ![02](https://user-images.githubusercontent.com/98649610/163393077-5aab232a-16b1-44c3-800f-22d24a0ec903.JPG)
-* Modifica stato delle fatture *
+
+* Modifica stato delle fatture 
 ![04](https://user-images.githubusercontent.com/98649610/163393273-60553a5f-11c2-454c-9776-9666ef8a690f.JPG)
 
 
