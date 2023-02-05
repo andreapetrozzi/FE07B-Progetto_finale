@@ -1,13 +1,15 @@
 # FE0721B-Progetto_finale
 System for managing a customer database and their invoices with Angular
 
-Il progetto consiste nella creazione di un sistema per la gestione di un'anagrafica clienti e delle loro fatture.
-Le API sono ad accesso riservato, è previsto un sistema di login e scambio di token Beerer.
-L'anagrafica clienti permette le classiche operazioni crud,
-il form di inserimento modifica è arricchito da alcune API per province, comuni e tipi di cliente. 
+The project consists in the creation of a system for the management of a customer database and their invoices.
 
-Per quanto riguarda la lista dei clienti le API mettono a disposizione una paginazione server side
-Stessa cosa per il sistema "fatture": sono previste le classiche implementazioni crud.
+The APIs have restricted access, a login system and exchange of Beerer tokens is provided.
+
+The customer database allows the classic crud operations, the modification entry form
+is enriched by some APIs for provinces, municipalities and types of customer.
+
+As far as the list of customers is concerned, the API provides server-side pagination
+Same thing for the "invoices" system: the classic crud implementations are foreseen.
 
 Framework used: 
 - Bootstrap, 
@@ -18,16 +20,16 @@ Framework used:
 - `npm i bootstrap`;
 - `ng add @ng-bootstrap/ng-bootstrap`.
 
-### Screen Homepage (Login) 
+### Screen "Homepage (Login)"
 ![01](https://user-images.githubusercontent.com/98649610/162673278-4dffbec6-38d0-4241-bd09-505acaab251f.JPG)
 
-### Lista delle fatture 
+### Screen "Invoice list"
 ![01](https://user-images.githubusercontent.com/98649610/163393069-34a46ee2-1c43-478a-ab8a-82b4fd4b166b.JPG)
 
-### Lista clienti 
+### Screen "Customer list"
 ![02](https://user-images.githubusercontent.com/98649610/163393077-5aab232a-16b1-44c3-800f-22d24a0ec903.JPG)
 
-### Modifica stato delle fatture 
+### Screen "Change invoice status"
 ![04](https://user-images.githubusercontent.com/98649610/163393273-60553a5f-11c2-454c-9776-9666ef8a690f.JPG)
 
 ### Login credentials:
