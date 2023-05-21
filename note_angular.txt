@@ -1,0 +1,1573 @@
+
+	******* Installazione ANGULAR (globale) *********
+
+(!)     npm install -g @angular/cli
+
+       Controllo delle Versioni
+      	 node -v
+       	 npm -v
+
+	Lista dei comandi a disposizione:
+(!)     ng g c --help 
+	
+
+
+	********* Installazione ANGULAR (locale) ********* 
+
+	Aprire "promt dei comandi":
+	cd c://mamp/htdocs/applicazioni/...
+
+	Sul TERMINALE:
+(!)	ng new "nomedelfile"
+	-> Seleziona "NO" o "SI" alla richiesta del Routing (opzionale)
+
+	Sul TERMINALE di Visual Code (per visaulizzarlo nel browser);
+(!)	ng s -o
+ 	-> yes
+
+	SI VISUALIZZA su: localhost:4200
+
+
+*******************************************************************************************************
+
+
+	 Esercizio #1
+      1. Vai su "assets" --> crea file "db.json"
+         NB: Leggere documentazione delle API -> COSA sono e COME si chiamano
+
+      2. Creare la cartella "Models" (in "App")
+         Serve nell'inserire i modelli che utilizziamo (interfacce, template ecc.) che poi riutilizzeremo
+         All'interno della cartella creiamo un file ->es. todo.ts (è la nostra INTERFACCIA)
+
+      3. Creiamo il "Service":
+	 Un modello che esegue delle funzioni (o una funzione -> in questo caso la lettura del json)
+         
+         Come? -> TERMINALE: 
+(!)	 ng c service "nome"
+         
+	 Oppure:
+	 Tasto dx nella cartella "Models" -> angular create service -> nominarla es. "todos"
+
+
+
+*******************************************************************************************************
+
+   
+
+      Creo altri componenti (per atomizzare l'applicazione) -> Speck -> Possiamo eliminare (usato per il debug)
+      Come si crea? -> 2 metodi
+
+        PRIMO METODO -> Manuale
+	        Crea cartella "titolo" o "navbar" o "footer" -> Creare poi titolo.component.ts + .html + .scss
+        	Crea la classe che utilizzerà app. -> Vedi TS -> più
+
+        SECONDO METODO -> TERMINALE
+ 
+(!)       ng generate component "nomedelcomponente" (es. footer)
+
+          Oppure sul TERMINALE-> con un nuovo terminale su nuova app
+(!)       ng g component "nomedelcomponente" (es. navabar")
+
+
+        TERZO METODO 
+	   
+	Click dx su app.component -> "Angular: Generate a Component"
+
+
+
+
+*******************************************************************************************************
+
+
+
+        ********* TERMINALE ********* 
+
+        TERMINALE:
+        Crea un file singolo chiamato "sottotitolo" senza il "skip test":
+
+          ng g c sottotitolo -s -t --skip-test
+
+        Crea un file ts chiamato par:
+
+          ng g c par -s -t --skip-tests --flat
+
+
+        OPPURE
+        Andare sul file "Angular.json" -> sotto a "@schematics/angular:component": {
+          "flat": true,
+          "inlineStyle": true,
+          "inlineTemplate": true,
+          "skipTests": true
+
+        Sul TERMINALE
+        crea un file "ts prova.component":
+        ng g c prova
+
+
+
+*******************************************************************************************************
+
+
+
+	********* Installare BOOTSTRAP su Angular *********  
+
+        Sul TERMINALE:
+(!)	npm i bootstrap
+
+        Poi vai su "style.scss" e scrivi: 
+	@import "~bootstrap/scss/bootstrap";
+
+
+
+*******************************************************************************************************
+
+
+	*********  Stabilire le ROTTE ********* 
+
+	All'interno di "App" -> Creo la cartella "pages"
+	All'interno di "pages" creo le 3 pagine
+        -> click tasto dx su "pages" -> "create a component"
+        -> home + active-posts + inactive-posts
+        -> Page
+        -> Add more options -> flat, inlineStyle, inlineTemplate, skipTests, type
+        -> true
+        -> page
+
+        Creiamo la navbar -> Su App -> Impostazioni di Default
+
+        Per creare una INTERFACCIA
+	TERMINALE        
+(!)	ng new interface
+
+	Istallare axsios:
+(!)     npm i axsios
+
+
+
+
+*******************************************************************************************************
+
+
+
+        ********* PER IL PROGETTO 11 -> INSTALLAZIONE per simulare back-end ********* 
+
+	01. ProntComandi
+
+     	cd c://mamp/htdocs/applicazioni 
+	ng new "nomeprogetto" -> routing -> SCSS
+
+	02. Scompartare la cartella "es. cart starter" e sovrascrivi con quello creato "nomeprogetto"
+
+	(Sulla cartella Menù Visualizza -> ozioni -> visualizzazione -> spuntare nascondi le estenzioni e/o nascondi file prontetti di sistema)
+
+	03. Su Visual Code
+	Aprire la cartella col TERMINALE
+
+-> 	npm i 
+-> 	npm i boostrap -> importare su style.scss -> @import "~bootstrap/scss/bootstrap";
+->  	npm install json-server
+
+		(installare estensione ThunderClient su visual studio)
+
+(!)	npm run full-stack
+
+
+
+	Andare sul browser e scrivere: 
+	localhost:4200
+
+	Su ThunderClient click "new request" -> al GET: 
+	http://localhost:4201/products
+
+
+
+
+
+*******************************************************************************************************
+
+
+	*********  LogIn ********* 
+
+	Set   -> form.setValue()
+	Patch -> form.patchValue()
+
+	"Driven forms" viene utilizzato per -> login, e accessi ad aree propria, personalizzazione di elementi dell'applicazione (es entra su un prodotto e personalizzalo)
+	"Reactive Forms" -> accesso diretto alle api 
+	
+		Validatori Build-in -> già presenit dentro angula per i casi più generici (min, max, required, email)
+		Validatori Custom   -> Possiamo creare i nostri validitaori sincroni (custom async validator) -> attendono la validazione ma consentono di andare avanti
+
+		statusChange -> observable -> notifica dello stato 
+		valuesChange -> observable -> notifica del value
+
+	Nei Reactive Forms USIAMO gli operatori "Rxjs" -> utili per filtrare, ritardare e modificare i valori ricevuti
+ 	-> es. invia nei server i valori di una searchbar (!)
+	
+		-> debounceTime()	
+		-> distinctUntilChanged()
+
+
+	
+*******************************************************************************************************
+	
+
+
+	********* Installazione JSON SERVER e JSON SERVER AUTH ********* 
+
+(!)	npm install -D json-server json-server-auth
+
+
+
+*******************************************************************************************************
+	
+
+
+	********* INSTALLAZIONE ANGULAR JWT ********* 
+
+->	npm install @auth0/angular-jwt
+
+	oppure scrivere:
+
+->	npm i @auth0/angular-jwt
+
+
+	AVVIO di Json Server (da eseguirsi insieme a ng s in due terminali separati): 
+	Stringa da inserire nel file package.json 
+	Alla fine degli scripts di avvio e da avviare da TERMINALE con il comando:
+
+->      npm run backend
+	
+        "backend": "json-server-auth --watch db.json --routes routes.json --port 4201 --delay 1000" 
+
+
+
+*******************************************************************************************************
+
+	
+	********* Installazione MATERIAL ********* 
+
+	TERMINALE
+(!)	npm update
+	
+(!)	json-server --watch db.json --port 3002
+
+
+	applicazioni funzionali per reti aziendali(?)
+
+
+	http://epicode.online/epicodebeservice_v2
+	fe_0721b
+
+	TOKEN!!!! di accesso alla base dati
+	eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTY0NjgzNTE3MiwiZXhwIjoxNjQ3Njk5MTcyfQ.wspq3MB_wJKMeLKUcUpNcyiWX0BI5fqeSqhg2HIsA3zWdhSv_Wdyer7Nf_35pZvd1b91i7tsRftZp0n3qTF3bQ
+
+	ajejebrazorf
+	ajeje@brazorf.it
+	123456
+
+	mettere le estensioni
+
+	npm i
+	npm i bootstrap
+	ng add @ng-bootstrap/ng-bootstrap
+
+
+	********* DA RICORDARE *********
+
+	-> --inline-style (-s)
+	-> --inline-template (-t)
+	-> --skip-tests
+	
+	---> QUINDI... 
+	ng g c nomecomponente -s -t --skip-tests --flat
+
+
+
+
+
+	********* Databinding *********
+	ONE WAY 
+	-> Event Binding <> ----> comunica dal componente al template
+	get....
+	-> Property Binding {} ------> comunica dal template al componente
+	(click)="cambianome"
+
+
+	TWO WAY
+	Cambia Model -> Aggiorna vista
+	Cambia Vist -> Aggiorna Model
+
+	Direttive Build-in:
+	Le diretteive sono classi che AGGIUNGONO un comportamento aggiuntivo agli alementi nelle app Angular
+
+	1) Direttive Attribute -> Modificinao l'aspetto o il comportamento di un elmento, un componente o un'altra direttiva
+		NgClass -> Per assegnare una classe a un elemento
+	NgStyle -> per assegnare una stile a un elemento 
+
+	2) Direttive Strictural -> Modificona ol layout Dom aggingendo rimuovendo elememnti DOM
+	NgIf -> per decidere se renderizzare o meno un elemento 
+
+	NgFor -> Per stampare in loop un certo numero di elementi
+	NgSwitch
+	NgNotBindable -> esclude dal template 
+
+
+
+
+
+
+
+
+
+*******************************************************************************************************
+*************************************************************** COMANDI TERMINALI 
+
+	**JQUERY**:
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	**TERMINALE JQUERY**:
+	npm i --save-dev @types/jquery
+
+
+
+	**BOOTSTRAP CSS**:
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	**BOOTSTRAP SCRIPT**
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+	**BOOTSTRAP ICONS**:
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+
+
+
+	**ANGULAR**:
+	Dopo aver fatto npm i bootstrap(NO CDN)
+	in styles.scss -> @import "~bootstrap/scss/bootstrap";
+
+
+	**BOOTSTRAP ICONS**
+	npm i bootstrap-icons
+	@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+
+	-- script da includere in angular.json 
+	"scripts": ["node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"]
+
+ 
+	<!-- "style":  se lo includo con @import non serve        [ 
+          ["node_modules/bootstrap/dist/js/bootstrap.min.css", "src/styles.scss" ]  -> file css va a sovrascrivere l'scss -->
+
+	**JSON-SERVER AUTH**
+
+
+
+
+----------------------------------------------- LIBRERIE ANGULAR ----------------------------------------------------------
+
+	***NB: con ng add step manuali evitati perchè inclusi nell'istallazione della libreria
+
+	**ng-BOOTSTRAP**
+	Dopo aver fatto npm i bootstrap(NO CDN)
+	in styles.scss -> @import "~bootstrap/scss/bootstrap";
+	ng add @angular/localize;
+	npm install @ng-bootstrap/ng-bootstrap; ( o ng add @ng-bootstrap/ng-bootstrap***)
+	poi in app.module -> import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+                     @NgModule({
+                         imports: [NgbModule],
+                     })
+                     export class YourAppModule{}
+
+	**LIBRERIA CDK**
+	npm i @angular/cdk
+	(npm i bootstrap) -> la cdk lavora con qualsiasi css
+
+	**ng-ZORRO**
+	npm i ng-zorro-antd ( o ng add ng-zorro-antd***)
+	in angular.json -> "styles": ["node_modules/ng-zorro-antd/ng-zorro-antd.min.css","src/styles.scss"],
+	(in app.module per le animazioni includere -> import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+
+	**ANGULAR-MATERIAL**
+	ng add @angular/material***
+
+	**ANGULAR FLEX -- libreria per il layout**
+	npm i -s @angular/flex-layout (@angular/cdk)-> con l'installazione di material già installata la cdk (non serve)
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+	**INSTALLAZIONE JSON-SERVER**
+	npm install -D json-server json-server-auth 
+
+
+	**INSTALLAZIONE JSON WEB TOKEN**    
+	npm i @auth0/angular-jwt     
+
+
+
+	*** APPUNTI sulla STRUTTURA ---
+
+	.browserlistrc -> Lista di browser che supporta l'applicazione (scrivere tutti i browser  nello specifico  che sraranno comppatibibili)
+	.editorconfig -> Utili per piu sviluppatori -> nello stile
+	.gitgnore -> crea tutti i file o cartelle che saranno ignorate con Git
+
+(!)	angular.json -> IMPORTANTE
+		Gestire i comandi di Angular
+		Parte importante
+			"projects" ->
+				nome della nostra applicazione
+				projectType -> tipo di progetto o appliucation o libraryt
+				 schematics ->
+					root -> dove si trova il nostro progetto
+				 sourceRoot -> dove si trova il codice del nostro progetto -> "src"
+				prefix -> prefisso delle direttive (delle pipe) 
+				architect -> 
+
+	karma.confg.js -> gestisce i test (complesso) -> test unit -> test end-to-end (Crea degli scenari)
+			Fondamentale
+
+	package.json -> 
+		"sripts" -> possiamo scrivere NOI i comandi!
+		ES TERMINALE: 
+		npm run start
+		npm run build0
+
+		"dependecies" -> le librerie CORE che possiamo IMPORTARE nelle nostre applicazionic
+		"devDependecies" -> le librerie o pacchetti utili per applicazioni in fase di sviluppo (nella fase di build) 
+	
+		"npm install" o "npm i" -> istalla tutti i pacchetti del package.json
+
+	Readme.md -> semplice file di descrizione del progetto
+	
+	tsonfig.json -> aggiunge altre opzioni specifiche
+			"angularcomplieOptions" -> info di complilazione di Angular .> converte in JS puro
+
+	
+	
+
+	Per fare la build
+	TERMINALE:
+	ng build
+
+	
+
+	LEZIONE #4.1
+
+	TERMINALE:
+	ng generate component "footer"
+
+	Lista dei comandi a disposizione nel Componente:
+	ng g c --help 
+
+	Quelli che servono maggiormente!
+	inline-style
+	inline-template
+	--skip-test
+
+	--> ng g c "sottotitolo" -s -t --skip-tests
+	--> ng g c "par" -s -t --skip-tests --flat
+
+
+	@schematics/angular:component -> Possiamo configurare il componente!
+
+*************************************************************************************
+
+
+	****** Librerie Angular ******
+
+(!)	NG-Boostrap
+
+	// Link Documentazione
+	// https://getbootstrap.com/docs/5.3/getting-started/introduction/s
+
+	// Terminale:
+	// npm i bootstrap
+
+	// Andare sul styles.scss e importare bootstrap
+	// Vai su angular.json -> riga n.53 -> "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+
+	// Ng-Boostrap:
+	// https://ng-bootstrap.github.io/#/home
+
+	// Terminale:
+	// ng add @angular/localize
+	// npm install @ng-bootstrap/ng-bootstrap
+
+
+
+(!)	SDK
+
+	// Usare la SDK (una volta era inclusa con Material ma ora è isolata)
+	// https://material.angular.io/cdk/categories
+
+	// Terminale:
+	// npm i @angular/cdk
+
+	// Possiamo anche installare Bootstrap all'interno
+	// npm i bootstrap
+
+
+
+(!)	Ng-Zorro
+
+	// https://ng.ant.design/docs/getting-started/en
+
+	// Terminale:
+	// npm i ng-zorro-antd
+
+	// Andare in angular.json riga 52 -> "styles": ["node_modules/ng-zorro-antd/ng-zorro-antd.min.css","src/styles.scss"],
+
+	// Lista componenti -> https://ng.ant.design/components/overview/en
+
+
+
+(!)	NG Material
+
+	// https://material.angular.io/
+
+	// Terminale
+	// ng add @angular/material
+
+	// Poi premere y -> poi scegliere tema -> poi y -> poi y 
+
+	// https://material.angular.io/components/categories
+
+	// Flex-layout
+	// https://github.com/angular/flex-layout
+	// npm i -s @angular/flex-layout                                                                        
+
+
+
+*************************************************************************************
+
+	ESEMPIO di API
+
+
+	import { HttpClient } from '@angular/common/http';
+	import { Injectable } from '@angular/core';
+
+	@Injectable()
+	export class ApiService {
+	  constructor(private http: HttpClient) { }
+
+	*********************************
+	  // Esempio di richiesta GET
+	  getDati() {
+	    const url = 'https://api.example.com/dati';
+	    const parametri = { parametro1: 'valore1', parametro2: 'valore2' };
+
+	    return this.http.get(url, { params: parametri });
+	  }
+
+	*********************************
+	  // Esempio di richiesta POST
+	  postDati(dati: any) {
+	    const url = 'https://api.example.com/dati';
+	    const header = { Authorization: 'Bearer <TOKEN>' };
+
+	    return this.http.post(url, dati, { headers: header });
+	  }
+
+	*********************************
+	  // Esempio di richiesta PUT
+	  putDati(id: number, dati: any) {
+	    const url = `https://api.example.com/dati/${id}`;
+
+	    return this.http.put(url, dati);
+	  }
+
+	*********************************
+	  // Esempio di richiesta DELETE
+	  deleteDati(id: number) {
+	    const url = `https://api.example.com/dati/${id}`;
+
+	    return this.http.delete(url);
+	  }
+	}
+
+
+
+
+	Stiamo utilizzando il modulo HttpClient di Angular per effettuare richieste HTTP all'API esterna. 
+	Abbiamo creato un servizio ApiService che inietta l'HttpClient nel suo costruttore per poter effettuare chiamate HTTP. 
+	Abbiamo quindi definito metodi per eseguire richieste GET, POST, PUT e DELETE, 
+	ciascuno con il suo URL, eventuali parametri o header necessari e il corpo dei dati (nel caso delle richieste POST e PUT). 
+	Questi metodi restituiscono un'istanza di Observable che può essere sottoscritta dai componenti Angular 
+	per ottenere i dati dalla risposta della richiesta e gestirli come necessario.
+
+
+*************************************************************************************
+
+	L'architettura RESTful (REpresentational State Transfer) è un'architettura di stile architetturale 
+	per la progettazione di servizi web che si basa su un insieme di principi di base. 
+	Di seguito sono elencati i principali elementi dell'architettura RESTful:
+
+	Risorse: 
+	Le risorse sono entità concettuali che sono accessibili attraverso un URI (Uniform Resource Identifier), 
+	come ad esempio un URL. 
+	Le risorse possono essere qualsiasi cosa, come oggetti, dati, servizi o funzionalità, 
+	che possono essere manipolati tramite le operazioni HTTP.
+
+
+	Verbi HTTP: 
+	Le operazioni per manipolare le risorse sono definite dai verbi HTTP standard, 
+	inclusi GET, POST, PUT, PATCH e DELETE. 
+	Questi verbi corrispondono alle operazioni CRUD (Create, Read, Update, Delete) 
+	e consentono di eseguire azioni sulle risorse in modo uniforme.
+
+	Rappresentazione: 
+	Le risorse possono essere rappresentate in diversi formati, 
+	come ad esempio JSON, XML o altri formati specificati. 
+	Le rappresentazioni vengono trasferite tra il client e il server nelle richieste e nelle risposte HTTP.
+
+	Stateless: 
+	Le richieste client-server sono stateless, il che significa che 
+	ogni richiesta del client deve contenere tutte le informazioni necessarie 
+	per comprendere e gestire la richiesta. 
+	Lo stato del client non viene mantenuto sul server tra le richieste.
+
+	Cache: Le risposte possono essere memorizzate nella cache per migliorare le prestazioni. 
+	I client possono memorizzare le risposte e riutilizzarle 
+	per richieste future identiche, riducendo così il carico sul server.
+
+	Interfaccia uniforme: 
+	L'interfaccia tra client e server deve essere uniforme, 
+	con un numero limitato di interfacce ben definite. 
+	Questo semplifica l'architettura del sistema e lo rende scalabile e facile da modificare.
+
+	Sistema client-server: 
+	L'architettura è basata sul principio di separazione delle responsabilità tra client e server. 
+	Il client è responsabile dell'interfaccia utente e dell'esperienza dell'utente, 
+	mentre il server è responsabile della logica di business e della gestione delle risorse.
+
+	Livelli: 
+	L'architettura può essere composta da più livelli di componenti, come ad esempio proxy, 
+	bilanciatori di carico o server di cache. 
+	Questi livelli possono essere utilizzati per migliorare 
+	la scalabilità, l'affidabilità e le prestazioni del sistema.
+
+	L'architettura RESTful è ampiamente utilizzata per la progettazione di servizi web, 
+	inclusi i servizi web API, a causa della sua semplicità, scalabilità e flessibilità.
+
+
+**********************************************************************************
+	I formati dati più comuni 
+
+	XML (eXtensible Markup Language)
+	JSON (JavaScript Object Notation):contiene collezioni di coppie nome/valore e liste ordinate di valori. 
+	
+	Poiché queste sono strutture di dati universali, il formato può essere utilizzato con qualsiasi linguaggio di programmazione.
+
+
+**************************************************
+
+	Animazioni
+	import { BrowserAnimationsModule } from "@angular/platform-browser/animation"
+	Browser....
+
+
+********************************
+
+
+Fare il deploy
+
+	ng build
+	
+
+	environment
+	--configuration
+	ng build -c stage
+	ng serve -c stage
+
+	Compilazione just in time:s
+	ng s
+
+	Compilazione head of time:
+	ng b o ng build
+
+	
+
+https://github.com/dadegi
+
+
+****************************************************************************************
+
+	LEZIONE di RxJS
+
+Operatori di CREAZIONE
+
+(!)	of()
+	Crea un nuovo flusso di dati Observable che emette uno o più valori specificati come argomenti.
+
+	##############################
+	SINTASSI:
+	of(...args: any[]): Observable<any>
+
+		args -> uno o più valori che devono essere emessi dal nuovo flusso di dati Observable.
+
+	##############################
+	ESEMPIO:
+	Per creare un nuovo flusso di dati Observable che emette 2 valori, 1 e 2, 
+	si può utilizzare l'operatore of() in questo modo:
+
+	import { of } from 'rxjs';
+
+	const obs = of(1, 2);
+
+	obs.subscribe(val => console.log(val));
+	// Output: 1, 2
+
+
+	In questo esempio, l'operatore of() viene utilizzato per creare il flusso di dati Observable 
+	obs che emette i valori 1 e 2. 
+	Il metodo subscribe() viene utilizzato per sottoscriversi al flusso di dati Observable e ricevere i valori emessi
+
+
+****************************************************************************************
+
+Operatori di CREAZIONE
+
+	from(),
+	Crea un nuovo flusso di dati Observable a partire da una fonte di dati esistente, come un array, una promise o un iterable.
+
+	##############################
+	SINTASSI:
+
+	from(input: ObservableInput<T>): Observable<T>
+
+	input rappresenta la fonte di dati esistente da cui creare il flusso di dati Observable 
+
+	##############################
+	ESEMPIO:
+	Per creare un nuovo flusso di dati osservabile a partire da un array di numeri, 
+	si può utilizzare l'operatore from() in questo modo:
+
+	import { from } from 'rxjs';
+
+	const numbers = [1, 2, 3];
+	const obs = from(numbers);
+
+	obs.subscribe(val => console.log(val));
+	// Output: 1, 2, 3
+
+	L'operatore from() viene utilizzato per creare il flusso di dati Observable obs 
+	a partire dall'array di numeri numbers. 
+	Il metodo subscribe() viene utilizzato per sottoscriversi al flusso di dati osservabile e ricevere i valori emessi.
+
+****************************************************************************************
+
+Operatori di CREAZIONE
+
+(!)	interval()
+	Creare un flusso di dati Observable che emette un valore numerico crescente in modo periodico, ad intervalli di tempo specificati.
+
+	##############################
+	SINTASSI:
+
+	interval(period: number = 0, scheduler: SchedulerLike = async): Observable<number>
+
+		period rappresenta l'intervallo di tempo in millisecondi tra un valore emesso e il successivo, 
+		scheduler rappresenta l'oggetto Scheduler da utilizzare per controllare il flusso di esecuzione.
+
+	##############################
+	ESEMPIO:
+
+	Ad esempio, per creare un nuovo flusso di dati osservabile che emette un valore numerico ogni secondo, 
+	si può utilizzare l'operatore interval() in questo modo:
+
+
+	import { interval } from 'rxjs';
+
+	const obs = interval(1000);
+
+	obs.subscribe(val => console.log(val));
+	// Output: 0, 1, 2, 3, 4, 5, ...
+
+	L'operatore interval() viene utilizzato per creare il flusso di dati Observable obs 
+	che emette un valore numerico crescente ogni secondo. 
+	Il metodo subscribe() viene utilizzato per sottoscriversi al flusso di dati Observable e ricevere i valori emessi.
+
+
+****************************************************************************************
+
+Operatori di CREAZIONE
+
+(!)	timer()
+	Creare un flusso di dati Observable che emette un valore dopo un determinato intervallo di tempo.
+
+	##############################
+	SINTASSI:
+
+	timer(dueTime: number | Date = 0, periodOrScheduler?: number | SchedulerLike, scheduler?: SchedulerLike): Observable<number | Date>
+
+
+	dueTime -> l'intervallo di tempo (in millisecondi) tra l'emissione del primo valore 
+	e l'inizio dell'emissione periodica (se specificata), 
+
+	periodOrScheduler -> l'intervallo di tempo (in millisecondi) tra le emissioni periodiche (se specificato) 
+	o l'oggetto Scheduler da utilizzare per controllare il flusso di esecuzione, 
+
+	scheduler -> l'oggetto Scheduler da utilizzare per controllare il flusso di esecuzione.
+
+	
+	##############################
+	ESEMPIO:
+	Ad esempio, per creare un nuovo flusso di dati Observable che emette un valore dopo 2 secondi 
+	e successivamente emette un valore ogni secondo, si può utilizzare l'operatore timer() in questo modo:
+
+
+	import { timer } from 'rxjs';
+
+	const obs = timer(2000, 1000);
+
+	obs.subscribe(val => console.log(val));
+	// Output: 0, 1, 2, 3, 4, 5, ...
+
+
+	In questo esempio, l'operatore timer() viene utilizzato per creare il flusso di dati osservabile obs 
+	che emette un valore dopo 2 secondi e successivamente emette un valore ogni secondo. 
+	Il metodo subscribe() viene utilizzato per sottoscriversi al flusso di dati osservabile e ricevere i valori emessi.
+
+
+****************************************************************************************
+
+Operatori di CREAZIONE
+
+(!)	create(),
+	Crea un nuovo flusso di dati Observable personalizzato. 
+	Utile quando si desidera creare un flusso di dati Observable che implementa 
+	una logica specifica che non può essere ottenuta con gli operatori built-in di RxJS.
+
+	##############################
+	SINTASSI:
+
+	create(subscribe: (subscriber: Subscriber<T>) => TeardownLogic): Observable<T>
+
+
+		subscribe rappresenta una funzione che definisce il comportamento del flusso di dati Observable 
+		La funzione riceve un oggetto Subscriber come parametro e deve restituire un oggetto TeardownLogic, 
+		che viene utilizzato per pulire le risorse associate al flusso di dati Observable quando viene completato o annullato.
+	
+	##############################
+	ESEMPIO:
+	
+	Ad esempio, per creare un nuovo flusso di dati Observable personalizzato che emette tre valori 
+	e successivamente completa, si può utilizzare l'operatore create() in questo modo:
+
+	import { Observable } from 'rxjs';
+
+	const obs = new Observable(observer => {
+	  observer.next(1);
+	  observer.next(2);
+	  observer.next(3);
+	  observer.complete();
+	});
+
+	obs.subscribe(val => console.log(val));
+	// Output: 1, 2, 3
+
+	L'operatore create() viene utilizzato per creare il flusso di dati osservabile obs. 
+	La funzione di sottoscrizione passata alla funzione create() emette tre valori (1, 2, 3) 
+	utilizzando il metodo next() dell'oggetto observer, 
+	e successivamente completa l'osservazione utilizzando il metodo complete().
+	Infine, il metodo subscribe() viene utilizzato per sottoscriversi al flusso di dati osservabile e ricevere i valori emessi.
+
+
+****************************************************************************************
+
+
+L'operatore di COMBINAZIONE
+
+(!)	merge()	
+	Combina i valori emessi da più Observable in un singolo Observable 
+	A differenza dell'operatore zip(), che aspetta che tutti gli Observable di origine emettano un valore prima di emettere il valore combinato, 
+
+	l'operatore merge() emette il valore combinato non appena uno qualsiasi degli Observable di origine emette un nuovo valore.
+
+	##############################
+	SINTASSI:
+
+	merge(observable1, observable2, ..., observableN)
+
+		observable1, observable2, ..., observableN sono gli osservabili che si vogliono combinare.
+
+	##############################
+	ESEMPIO:
+
+	import { merge, of } from 'rxjs';
+
+	const obs1 = of('A', 'B', 'C');
+	const obs2 = of(1, 2, 3);
+	const obs3 = of(true, false, true);
+
+	merge(obs1, obs2, obs3).subscribe(val => {
+	  console.log(`Value emitted: ${val}`);
+	});
+
+	In questo esempio, vengono creati 3 Observable obs1, obs2 e obs3, che emettono rispettivamente i valori 'A', 'B' e 'C', 
+	i valori 1, 2 e 3, e i valori true, false e true. 
+	L'operatore merge() viene utilizzato per combinare questi 3 Observable in un singolo Observable 
+
+	Quando uno qualsiasi degli Observable di origine emette un nuovo valore, 
+	merge() emette il valore combinato immediatamente. 
+	Infine, viene registrato un abbonamento all'Observable combinato che stampa i valori emessi da tutti gli Observable vabili di origine 
+	ogni volta che uno qualsiasi degli Observable di origine emette un nuovo valore.
+
+
+****************************************************************************************
+
+L'operatore di COMBINAZIONE
+
+(!)	concat()
+
+	Concatenare gli Observable in modo sequenziale, 
+	emettendo i valori di un Observable solo dopo che lObservable precedente ha completato la sua emissione.
+
+	##############################
+	SINTASSI:
+
+	concat(observable1, observable2, ..., observableN)
+
+		observable1, observable2, ..., observableN -> sono gli Observable che si vogliono concatenare.
+
+	##############################
+	ESEMPIO:
+
+	import { concat, of } from 'rxjs';
+	import { delay } from 'rxjs/operators';
+
+	const obs1 = of('A', 'B', 'C').pipe(delay(1000));
+	const obs2 = of(1, 2, 3).pipe(delay(500));
+	const obs3 = of(true, false, true).pipe(delay(1500));
+
+	concat(obs1, obs2, obs3).subscribe(val => {
+	  console.log(`Value emitted: ${val}`);
+	});
+	
+
+	Vengono creati 3 Observable obs1, obs2 e obs3, che emettono rispettivamente i valori 'A', 'B' e 'C', 
+	i valori 1, 2 e 3, e i valori true, false e true. 
+	Ogni Observable viene ritardato di un certo intervallo di tempo utilizzando l'operatore delay(), 
+	per simulare il fatto che ogni Observable impiega un certo tempo per completare la propria emissione. 
+
+	L'operatore concat() viene utilizzato per concatenare questi 3 Observable in un singolo Observable 
+	in modo tale che il valore 'A' venga emesso dopo un secondo, seguito da 'B' e 'C' dopo altri secondi, 
+	poi da 1, 2 e 3 dopo mezzo secondo, e infine da true, false e true dopo un altro secondo e mezzo. 
+	Infine, viene registrato un abbonamento all'Observable  concatenato che stampa i valori emessi in ordine sequenziale.
+
+
+****************************************************************************************
+
+L'operatore di COMBINAZIONE
+
+(!)	combineLatest()
+	Combina l'output di più observable in un singolo observable, 
+	emettendo un valore ogni volta che uno qualsiasi degli observable emette un nuovo valore.
+
+	##############################
+	SINTASSI:
+	combineLatest(observable1, observable2, ..., observableN, project)
+
+		observable1, observable2, ..., observableN -> sono gli observable, che si vogliono combinare, 
+		project -> una funzione opzionale che viene utilizzata per trasformare l'output combinato in un formato personalizzato.
+
+	##############################
+	ESEMPIO:
+
+	import { combineLatest, Observable } from 'rxjs';
+
+	const obs1: Observable<number> = new Observable((observer) => {
+	  setTimeout(() => {
+	    observer.next(1);
+	  }, 1000);
+	});
+
+	const obs2: Observable<number> = new Observable((observer) => {
+	  setTimeout(() => {
+	    observer.next(2);
+	  }, 2000);
+	});
+
+	const combinedObs: Observable<[number, number]> = combineLatest(obs1, obs2);
+
+	combinedObs.subscribe(([val1, val2]) => {
+	  console.log(`Obs1 value: ${val1}, Obs2 value: ${val2}`);
+	});
+
+
+	In questo esempio, vengono creati 2 Observable (obs1 e obs2)
+	che emettono un valore dopo 1 secondo e 2 secondi rispettivamente. 
+
+	L'operatore combineLatest() viene utilizzato per combinare questi 2 observable in un singolo Observable combinedObs. 
+	Quando uno qualsiasi dei 2 Observable emette un valore, 
+	combinedObs emette una matrice contenente l'ultimo valore emesso da ciascuno degli osservabili. 
+	Infine, viene registrato un abbonamento a combinedObs che stampa i valori emessi da entrambi gli Observable 
+	ogni volta che uno di essi emette un nuovo valore.
+
+
+****************************************************************************************
+
+L'operatore di COMBINAZIONE
+
+(!)	zip()
+	Combina i valori emessi da più Observable in un singolo Observable.
+	A differenza di combineLatest(), che emette un nuovo valore ogni volta che uno qualsiasi degli Observable di origine emette un nuovo valore, 
+
+	l'operatore zip() emette un nuovo valore solo quando tutti gli Observable di origine hanno emesso un nuovo valore.
+
+	##############################
+	SINTASSI:
+	zip(observable1, observable2, ..., observableN, project)
+
+		observable1, observable2, ..., observableN -> sono gli Observable che si vogliono combinare,
+		project -> è una funzione opzionale che viene utilizzata per trasformare l'output combinato in un formato personalizzato.
+
+	##############################
+	ESEMPIO:
+
+	import { zip, of } from 'rxjs';
+
+	const obs1 = of('A', 'B', 'C');
+	const obs2 = of(1, 2, 3);
+	const obs3 = of(true, false, true);
+
+	zip(obs1, obs2, obs3).subscribe(([val1, val2, val3]) => {
+	  console.log(`Obs1 value: ${val1}, Obs2 value: ${val2}, Obs3 value: ${val3}`);
+	});
+
+	In questo esempio, vengono creati 3 Observable obs1, obs2 e obs3, 
+	che emettono rispettivamente i valori 'A', 'B' e 'C', i valori 1, 2 e 3, 
+	e i valori true, false e true. 
+
+	L'operatore zip() viene utilizzato per combinare questi 3 Observable in un singolo Observable 
+	Quando tutti gli Observable di origine hanno emesso un nuovo valore, 
+	zip() emette una matrice contenente l'ultimo valore emesso da ciascun osservabile. 
+
+	Infine, viene registrato un abbonamento all'Observable combinato che stampa i valori 
+	emessi da tutti gli Observable di origine ogni volta che tutti gli Observable di origine hanno emesso un nuovo valore.
+
+
+
+****************************************************************************************
+
+
+L'operatore di FILTRAGGIO
+
+(!)	filter()
+	Filtra gli elementi emessi da un Observable in base a una condizione specificata. 
+	Emette solo gli elementi che soddisfano la condizione specificata.
+
+	##############################
+	SINTASSI:
+
+	filter(predicate: (value: T, index: number, source: Observable<T>) => boolean, thisArg?: any): Observable<T>
+
+		Dove "predicate" è una funzione che prende tre argomenti:	
+			value: l'elemento emesso dall'osservabile.
+			index: l'indice dell'elemento nell'osservabile.
+			source: l'osservabile sorgente.
+
+		La funzione "predicate" deve restituire true per gli elementi che si vogliono includere nell'output, 
+		e false per gli elementi che si vogliono escludere.
+
+	##############################
+	ESEMPIO:
+
+	import { of } from 'rxjs';
+	import { filter } from 'rxjs/operators';
+
+	const numbers = of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+	const evenNumbers = numbers.pipe(
+	  filter(num => num % 2 === 0)
+	);
+
+	evenNumbers.subscribe(
+	  num => console.log(`Even number: ${num}`),
+	  err => console.error(err),
+	  () => console.log('Completed')
+	);
+
+	Viene creato un Observable numbers che emette i numeri da 1 a 10. 
+	L'operatore filter() viene quindi utilizzato per filtrare gli elementi emessi dall'Observable  numbers, 
+	includendo solo quelli che sono numeri pari. 
+	L'Observable risultante evenNumbers emette solo i numeri pari, ovvero 2, 4, 6, 8 e 10. 
+	Infine, viene registrato un abbonamento all'Observable evenNumbers che stampa i numeri pari emessi, 
+	e completa l'Observable una volta che tutti gli elementi sono stati emessi.
+
+
+****************************************************************************************
+
+L'operatore di FILTRAGGIO
+
+(!)	take()
+	limita il numero di elementi emessi da un Observable ad un numero specificato.
+
+	##############################
+	SINTASSI:
+
+	take(count: number): Observable<T>
+
+		count -> è il numero di elementi che si vogliono includere nell'output.
+
+	##############################
+	ESEMPIO:
+
+	import { interval } from 'rxjs';
+	import { take } from 'rxjs/operators';
+
+	const numbers = interval(1000);
+
+	const firstFive = numbers.pipe(
+	  take(5)
+	);
+
+	firstFive.subscribe(
+	  num => console.log(`Number: ${num}`),
+	  err => console.error(err),
+	  () => console.log('Completed')
+	);
+
+
+	Viene creato un Observable numbers che emette un numero incrementale ogni secondo. 
+	L'operatore take() viene utilizzato per limitare l'emissione di elementi dell'Observable numbers ai primi 5. 
+	L'Observable risultante firstFive emette solo i primi 5 numeri emessi dall'Observable numbers. 
+	Infine, viene registrato un abbonamento all'Observable firstFive che stampa i primi 5 numeri emessi, 
+	e completa l'Observable una volta che tutti gli elementi sono stati emessi.
+
+
+****************************************************************************************
+
+L'operatore di FILTRAGGIO
+
+	skip()
+	Salta un numero specificato di elementi emessi da un Observable 
+
+	##############################
+	SINTASSI:
+
+	skip(count: number): Observable<T>
+
+		count -> sè il numero di elementi che si vogliono saltare.
+
+	##############################
+	ESEMPIO:
+
+	import { interval } from 'rxjs';
+	import { skip } from 'rxjs/operators';
+
+	const numbers = interval(1000);
+
+	const afterFiveSeconds = numbers.pipe(
+	  skip(5)
+	);
+
+	afterFiveSeconds.subscribe(
+	  num => console.log(`Number: ${num}`),
+	  err => console.error(err),
+	  () => console.log('Completed')
+	);
+
+	Viene creato un Observable numbers che emette un numero incrementale ogni secondo. 
+	L'operatore skip() viene quindi utilizzato per saltare i primi 5 numeri emessi dall'osservabile numbers. 
+	L'osservabile risultante afterFiveSeconds emette solo i numeri emessi dall'osservabile numbers dopo i primi 5. 
+	Infine, viene registrato un abbonamento all'osservabile afterFiveSeconds che stampa i numeri emessi dopo i primi 5, 
+	e completa l'osservabile una volta che tutti gli elementi sono stati emessi.
+
+
+****************************************************************************************
+
+L'operatore di FILTRAGGIO
+
+(!)	distinct()
+	Emettere solo valori unici dell'Observable 
+
+	##############################
+	SINTASSI:
+
+	distinct<T>(keySelector?: (value: T) => any, flushes?: Observable<any>): MonoTypeOperatorFunction<T>
+
+		L'operatore distinct() utilizza un oggetto Set per tenere traccia dei valori unici emessi dall'osservabile. 
+		Se viene emesso un valore già presente nell'insieme, questo valore viene ignorato.
+
+		Di default, l'operatore distinct() utilizza l'intero valore emesso dall'osservabile per verificare la sua unicità. 
+		sTuttavia, è possibile fornire una funzione keySelector opzionale 
+		per estrarre una chiave da ogni valore emesso e utilizzarla per verificare l'unicità.
+
+	##############################
+	ESEMPIO:
+
+	import { of } from 'rxjs';
+	import { distinct } from 'rxjs/operators';
+
+	const numbers = of(1, 2, 3, 1, 2, 4, 5, 3);
+
+	const uniqueNumbers = numbers.pipe(
+	  distinct()
+	);
+
+	uniqueNumbers.subscribe(
+	  num => console.log(`Number: ${num}`),
+	  err => console.error(err),
+	  () => console.log('Completed')
+	);
+
+	Viene creato un osservabile numbers che emette una serie di numeri, 
+	alcuni dei quali sono duplicati. 
+	L'operatore distinct() viene utilizzato per emettere solo i numeri unici dall'osservabile. 
+	L'osservabile risultante uniqueNumbers emette solo i numeri 1, 2, 3, 4 e 5, ignorando i numeri duplicati. 
+	Infine, viene registrato un abbonamento all'osservabile uniqueNumbers che stampa i numeri emessi 
+	e completa l'osservabile una volta che tutti gli elementi sono stati emessi.
+
+
+****************************************************************************************
+
+L'operatore di TEMPORIZZAZIONE
+
+(!)	debounceTime(), 	
+	Ritarda l'emissione di valori dall'Observable 
+	fino a quando non si verifica un periodo di tempo specificato senza alcuna nuova emissione.
+
+	##############################
+	SINTASSI:
+
+	debounceTime<T>(dueTime: number, scheduler?: SchedulerLike): MonoTypeOperatorFunction<T>
+
+		Dove dueTime è il periodo di tempo in millisecondi da attendere dopo ogni emissione prima di inviare l'ultimo valore emesso.
+
+		Ad esempio, supponiamo che si voglia creare un campo di ricerca in cui i 
+		risultati della ricerca vengono visualizzati solo quando l'utente smette di digitare 
+		per un certo periodo di tempo. 
+		In questo caso, si può utilizzare l'operatore debounceTime() 
+		per ritardare l'emissione dei valori dell'input fino a quando l'utente non ha smesso di digitare per un certo periodo di tempo.
+
+	##############################
+	ESEMPIO:
+
+	import { fromEvent } from 'rxjs';
+	import { debounceTime, map } from 'rxjs/operators';
+
+	const searchInput = document.getElementById('searchInput');
+
+	const searchInput$ = fromEvent(searchInput, 'input').pipe(
+	  map((event: any) => event.target.value),
+	  debounceTime(500)
+	);
+
+	searchInput$.subscribe(
+	  searchTerm => console.log(`Searching for: ${searchTerm}`),
+	  err => console.error(err),
+	  () => console.log('Completed')
+	);
+
+	In questo esempio, viene creato un osservabile searchInput$ che emette i valori dell'input dell'utente 
+	tramite l'evento input sulla casella di ricerca. 
+	L'operatore debounceTime() viene utilizzato per ritardare l'emissione dei valori di input 
+	di 500 millisecondi dopo ogni emissione, in modo che i risultati della ricerca vengano visualizzati 
+	solo quando l'utente smette di digitare per 500 millisecondi. 
+	Infine, viene registrato un abbonamento all'osservabile searchInput$ 
+	che stampa i termini di ricerca inseriti dall'utente e completa 
+	l'osservabile una volta che tutti gli elementi sono stati emessi.
+
+
+****************************************************************************************
+
+L'operatore di TEMPORIZZAZIONE
+
+(!)	throttleTime()
+	Limita la frequenza di emissione dei valori dell'Observable, 
+	inviando solo il valore più recente in un periodo di tempo specificato.
+
+	##############################
+	SINTASSI:
+
+	throttleTime<T>(dueTime: number, scheduler?: SchedulerLike, config?: ThrottleConfig): MonoTypeOperatorFunction<T>
+
+		Dove dueTime è il periodo di tempo in millisecondi in cui gli elementi emessi sono ignorati dopo l'emissione del primo elemento.
+
+		Ad esempio, supponiamo di avere un'interfaccia utente in cui l'utente può fare clic su un pulsante per aggiungere un nuovo elemento a una lista. Vogliamo evitare che l'utente faccia clic troppo velocemente, quindi vogliamo limitare la frequenza di aggiunta di nuovi elementi alla lista. In questo caso, possiamo utilizzare l'operatore throttleTime() per emettere solo l'ultimo valore emesso durante un periodo di tempo specificato.
+
+	##############################
+	ESEMPIO:
+
+	import { fromEvent } from 'rxjs';
+	import { throttleTime } from 'rxjs/operators';
+
+	const addButton = document.getElementById('addButton');
+
+	const addButton$ = fromEvent(addButton, 'click').pipe(
+	  throttleTime(1000)
+	);
+
+	addButton$.subscribe(
+	  () => console.log('Element added'),
+	  err => console.error(err),
+	  () => console.log('Completed')
+	);
+
+	In questo esempio, viene creato un osservabile addButton$ 
+	che emette valori ogni volta che l'utente fa clic sul pulsante "Aggiungi". 
+	
+
+	L'operatore throttleTime() viene utilizzato per limitare la frequenza di emissione dei valori 
+	a una volta ogni secondo (1000 millisecondi). 
+	In questo modo, se l'utente fa clic più volte sul pulsante durante il periodo di throttle, 
+	verrà emesso solo l'ultimo valore. 
+	Infine, viene registrato un abbonamento all'osservabile addButton$ che stampa un messaggio 
+	ogni volta che un elemento viene aggiunto alla lista e completa l'osservabile una volta che tutti gli elementi sono stati emessi.
+
+
+
+****************************************************************************************
+
+L'operatore di TEMPORIZZAZIONE
+
+(!)	delay(),
+	Ritarda l'emissione dei valori dell'Observable per un periodo di tempo specificato.
+
+	##############################
+	SINTASSI:
+
+	delay<T>(delay: number | Date, scheduler?: SchedulerLike): MonoTypeOperatorFunction<T>
+
+		delay -> è il periodo di tempo in millisecondi di ritardo dell'emissione dei valori.
+
+		Ad esempio, supponiamo di avere un'interfaccia utente in cui l'utente 
+		può fare clic su un pulsante per effettuare una chiamata HTTP e ottenere i dati da un server. 
+		Vogliamo fornire un feedback all'utente che la chiamata è in corso, ma vogliamo evitare 
+		che il feedback scompaia troppo velocemente. 
+		In questo caso, possiamo utilizzare l'operatore delay() per ritardare l'emissione dei valori 
+		e mantenere il feedback visibile per un periodo di tempo specificato.
+
+	##############################
+	ESEMPIO:
+
+	import { fromEvent, of } from 'rxjs';
+	import { delay, mergeMap } from 'rxjs/operators';
+
+	const searchButton = document.getElementById('searchButton');
+
+	const searchButton$ = fromEvent(searchButton, 'click').pipe(
+	  mergeMap(() => {
+	    // Simulate a HTTP request
+	    return of('Data').pipe(
+	      delay(2000)
+	    );
+	  })
+	);
+
+	searchButton$.subscribe(
+	  () => console.log('HTTP request completed'),
+	  err => console.error(err),
+	  () => console.log('Completed')
+	);
+
+	In questo esempio, viene creato un osservabile searchButton$ che emette valori ogni volta 
+	che l'utente fa clic sul pulsante "Cerca". 
+	L'operatore mergeMap() viene utilizzato per effettuare una chiamata HTTP simulata utilizzando 
+	l'operatore of(). L'operatore delay() viene utilizzato per ritardare l'emissione dei valori di "Data" di 2 secondi, 
+	simulando un ritardo nella risposta del server. 
+	Infine, viene registrato un abbonamento all'osservabile searchButton$ che stampa un messaggio 
+	quando la richiesta HTTP è stata completata e completa l'osservabile una volta che tutti i valori sono stati emessi.
+
+
+****************************************************************************************
+
+L'operatore di TEMPORIZZAZIONE
+
+(!)	timeout(),
+	Usato per gestire la durata massima di un'operazione. 
+	L'operatore emette un errore se un valore non viene emesso entro un certo periodo di tempo.
+
+	##############################
+	SINTASSI:
+
+	timeout<T>(dueTime: number | Date, scheduler: SchedulerLike = async): MonoTypeOperatorFunction<T>
+
+		Dove dueTime rappresenta il periodo di tempo in millisecondi entro cui deve essere emesso un valore.
+
+		Ad esempio, supponiamo di avere un'interfaccia utente in cui l'utente può fare clic 
+		su un pulsante per effettuare una chiamata HTTP e ottenere i dati da un server. 
+		In questo caso, vogliamo assicurarci che la chiamata HTTP non impieghi troppo tempo ad essere completata. 
+		Possiamo utilizzare l'operatore timeout() per emettere un errore se la chiamata HTTP non viene completata entro un certo periodo di tempo.
+
+	##############################
+	ESEMPIO:
+
+	import { fromEvent, of } from 'rxjs';
+	import { timeout, mergeMap } from 'rxjs/operators';
+
+	const searchButton = document.getElementById('searchButton');
+	
+	const searchButton$ = fromEvent(searchButton, 'click').pipe(
+	  mergeMap(() => {
+	    // Simulate a slow HTTP request
+	    return of('Data').pipe(
+	      timeout(5000)
+	    );
+	  })
+	);
+
+	searchButton$.subscribe(
+	  () => console.log('HTTP request completed'),
+	  err => console.error('HTTP request timed out', err),
+	  () => console.log('Completed')
+	);
+
+	In questo esempio, viene creato un osservabile searchButton$ 
+	che emette valori ogni volta che l'utente fa clic sul pulsante "Cerca". 
+	L'operatore mergeMap() viene utilizzato per effettuare una chiamata HTTP simulata utilizzando 
+	l'operatore of(). 
+	L'operatore timeout() viene utilizzato per impostare un limite di tempo di 5 secondi 
+	per la chiamata HTTP. 
+	Se la chiamata HTTP non viene completata entro 5 secondi, 
+	l'osservabile emette un errore. Infine, viene registrato un abbonamento 
+	all'osservabile searchButton$ che stampa un messaggio quando la richiesta HTTP 
+	è stata completata o se è stata interrotta a causa del timeout, 
+	e completa l'osservabile una volta che tutti i valori sono stati emessi.
+
+
+****************************************************************************************
+
+Operatori di GESTIONE ERRORI
+
+	catch()
+	gestisce gli errori in un flusso di dati Observable.
+
+	##############################
+	SINTASSI:
+	catch<T, R>(selector: (err: any, caught: Observable<T>) => ObservableInput<R>): OperatorFunction<T, T | R>
+
+	selector è una funzione che prende l'errore che si è verificato e restituisce un nuovo osservabile. 
+	Questo nuovo osservabile può essere un altro flusso di dati osservabile o un valore statico.
+
+	Ad esempio, supponiamo di avere un'interfaccia utente in cui l'utente 
+	può cercare un libro tramite una chiamata HTTP a un servizio esterno. 
+	In caso di errore, vogliamo fornire all'utente un messaggio di errore invece di mostrare un errore tecnico generico.
+
+	##############################
+	ESEMPIO:
+
+	import { throwError, of } from 'rxjs';
+	import { catchError, mergeMap } from 'rxjs/operators';
+
+	const searchButton = document.getElementById('searchButton');
+	const errorMessage = document.getElementById('errorMessage');
+
+	const searchButton$ = fromEvent(searchButton, 'click').pipe(
+	  mergeMap(() => {
+	    // Make a HTTP request to search for the book
+	    return this.bookService.searchForBook('Harry Potter');
+	  }),
+	  catchError(err => {
+	    // Log the error and show an error message to the user
+	    console.error('An error occurred while searching for the book', err);
+	    errorMessage.textContent = 'An error occurred while searching for the book. Please try again later.';
+	    return throwError(err);
+	  })
+	);
+
+	searchButton$.subscribe(
+	  () => console.log('HTTP request completed'),
+	  err => console.error('An error occurred', err),
+	  () => console.log('Completed')
+	);
+
+
+	In questo esempio, viene creato un osservabile searchButton$ 
+	che emette valori ogni volta che l'utente fa clic sul pulsante "Cerca". 
+	L'operatore mergeMap() viene utilizzato per effettuare una chiamata HTTP tramite il servizio bookService.
+	L'operatore catchError() viene utilizzato per catturare eventuali errori verificatisi 
+	durante la chiamata HTTP e gestirli mostrando un messaggio di errore all'utente e restituendo un nuovo osservabile che emette l'errore. Infine, viene registrato un abbonamento all'osservabile searchButton$ che stampa un messaggio quando la richiesta HTTP è stata completata o se è stata interrotta a causa di un errore, e completa l'osservabile una volta che tutti i valori sono stati emessi.
+
+****************************************************************************************
+
+Operatori di GESTIONE ERRORI
+
+	retry(),
+	Riprova un flusso di dati osservabile quando si verifica un errore.
+
+	##############################
+	SINTASSI:
+	retry(count?: number): MonoTypeOperatorFunction<T>
+
+	Dove count è il numero di volte che si desidera riprovare il flusso di dati 
+	osservabile in caso di errore. 
+	Se il parametro count non è specificato, il flusso di dati osservabile verrà riprovato all'infinito.
+
+	######################
+	Ad esempio, supponiamo di avere un'interfaccia utente in cui l'utente può cercare un libro 
+	tramite una chiamata HTTP a un servizio esterno. In caso di errore, vogliamo riprovare la chiamata HTTP due volte.
+
+	Ecco un esempio di utilizzo dell'operatore retry():
+
+	import { throwError, of } from 'rxjs';
+	import { catchError, mergeMap, retry } from 'rxjs/operators';
+
+	const searchButton = document.getElementById('searchButton');
+	const errorMessage = document.getElementById('errorMessage');
+
+	const searchButton$ = fromEvent(searchButton, 'click').pipe(
+	  mergeMap(() => {
+	    // Make a HTTP request to search for the book
+	    return this.bookService.searchForBook('Harry Potter').pipe(
+	      retry(2),
+	      catchError(err => {
+	        // Log the error and show an error message to the user
+	        console.error('An error occurred while searching for the book', err);
+	        errorMessage.textContent = 'An error occurred while searching for the book. Please try again later.';
+	        return throwError(err);
+	      })
+	    );
+	  })
+	);
+
+	searchButton$.subscribe(
+	  () => console.log('HTTP request completed'),
+	  err => console.error('An error occurred', err),
+	  () => console.log('Completed')
+	);
+
+	In questo esempio, viene creato un osservabile searchButton$ 
+	che emette valori ogni volta che l'utente fa clic sul pulsante "Cerca". 
+	L'operatore mergeMap() viene utilizzato per effettuare una chiamata HTTP 
+	tramite il servizio bookService. 
+	L'operatore retry() viene utilizzato per riprovare la chiamata HTTP fino a due volte in caso di errore. 
+	L'operatore catchError() viene utilizzato per catturare eventuali errori verificatisi durante la chiamata HTTP 
+	e gestirli mostrando un messaggio di errore all'utente e restituendo un nuovo osservabile 
+	che emette l'errore. Infine, viene registrato un abbonamento all'osservabile searchButton$ 
+	che stampa un messaggio quando la richiesta HTTP è stata completata o se è stata interrotta
+	a causa di un errore, e completa l'osservabile una volta che tutti i valori sono stati emessi.
+
+
+****************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
